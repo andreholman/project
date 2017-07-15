@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas Template</title>
+	<style>
+		body {
+			margin: 0;
+			overflow: hidden;
+			background: #2C3E50;
+		}
+
+		canvas { z-index: -20;}
+		
+		button#restart {
+			position: fixed;
+			right: 0;
+			top: 0;
+			padding: 20px;
+			padding-left: 16px;
+			padding-bottom: 16px;
+			margin: 0;
+			border-radius: 0;
+			border: none;
+			z-index: 20;
+			background-color: rgba(239, 239, 239, 0.2);
+			transition: 0.15s;
+			font-family: "Questrial", sans-serif;
+			color: #FFF6E5;
+			font-size: 22px;
+			border-left: 4px solid rgba(239, 239, 239, 0);
+			border-bottom: 4px solid rgba(239, 239, 239, 0);
+		}
+
+		button#restart:hover {
+			border-left: 4px solid rgba(239, 239, 239, 0.3);
+			border-bottom: 4px solid rgba(239, 239, 239, 0.3);
+		}
+
+		button#restart:active {
+			border-left: 4px solid rgba(239, 50, 50, 0.5);
+			border-bottom: 4px solid rgba(239, 50, 50, 0.5);
+		}
+
+
+		button#restart:focus {
+			outline: none;
+		}
+
+		@media (max-width: 769px) {
+			button#restart {
+				width: 100%;
+				border-left: none;
+			}
+		}
+	</style>
+</head>
+<body>
+	<canvas></canvas>
+	<button onclick="init()" id="restart">Restart</button>
+	<script src="/Users/huashan/Desktop/canvas-boilerplate-master%202/src/canvas.js"></script>
+</body>
+</html>
